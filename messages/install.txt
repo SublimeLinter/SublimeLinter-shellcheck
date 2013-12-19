@@ -1,0 +1,10 @@
+SublimeLinter-shellcheck
+-------------------------------
+This linter plugin for SublimeLinter provides an interface to shellcheck.
+
+INSTALLATION
+------------
+Before this plugin will activate, you *must* follow the installation
+instructions here:
+
+https://github.com/NotSqrt/SublimeLinter-shellcheck
