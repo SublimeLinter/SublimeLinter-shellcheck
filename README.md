@@ -9,8 +9,10 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 ### Linter installation
 Before using this plugin, you must ensure that `shellcheck` is installed on your system. To install `shellcheck`, do the following:
 
+1. Go to [the shellcheck GitHub repository](https://github.com/koalaman/shellcheck).
 1. Clone the git repo or download it as a ZIP archive; make sure to use a version more recent than commit 376d407ea10b55 (2013-11-13 17:28:08), where an easily parseable output was added.
-1. Follow instructions at [shellcheck](https://github.com/koalaman/shellcheck).
+1. Follow instructions in [README of shellcheck](https://github.com/koalaman/shellcheck/blob/master/README).
+1. `shellcheck` has to be seen by SublimeText, so you might have to create a symlink by using a command like `sudo ln -s <PATH TO SHELLCHECK> /usr/local/bin/shellcheck`
 
 Once shellcheck is installed, you can proceed to install the SublimeLinter-shellcheck plugin if it is not yet installed.
 
@@ -22,6 +24,8 @@ To install via Package Control, do the following:
 1. Within Sublime Text, bring up the [Command Palette](http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html) and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
 
 1. When the plugin list appears, type `shellcheck`. Among the entries you should see `SublimeLinter-shellcheck`. If that entry is not highlighted, use the keyboard or mouse to select it.
+
+2. In the console, you should see a message stating `SublimeLinter: shellcheck enabled: /usr/local/bin/shellcheck`
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings). For information on generic linter settings, please see [Linter Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Linter-Settings).
