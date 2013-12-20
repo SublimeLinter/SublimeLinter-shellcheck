@@ -20,7 +20,7 @@ Example output with --format gcc
 
 """
 
-from SublimeLinter.lint import Linter, util
+from SublimeLinter.lint import Linter
 
 
 class Shellcheck(Linter):
@@ -30,4 +30,3 @@ class Shellcheck(Linter):
     syntax = 'shell-unix-generic'
     cmd = ('shellcheck', '--format', 'gcc', '-')
     regex = r'^.+?:(?P<line>\d+):(?P<col>\d+): (?:(?P<error>error)|(?P<warning>(warning|note))): (?P<message>.+)$'
-
