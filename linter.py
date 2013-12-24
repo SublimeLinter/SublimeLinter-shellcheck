@@ -34,6 +34,6 @@ class Shellcheck(Linter):
     defaults = {
         '--exclude=,': ''
     }
-    inline_settings = 'exclude'
+    inline_settings = None
     inline_overrides = 'exclude'
     comment_re = r'\s*#'

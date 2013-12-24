@@ -38,7 +38,7 @@ In addition to the standard SublimeLinter settings, SublimeLinter-shellcheck pro
 
 |Setting|Description|Inline Setting|Inline Override|
 |:------|:----------|:------------:|:-------------:|
-|exclude|A comma-delimited list of codes to exclude.|&#10003;|&#10003;|
+|exclude|A comma-delimited list of codes to exclude.| |&#10003;|
 
 ### Examples
 
