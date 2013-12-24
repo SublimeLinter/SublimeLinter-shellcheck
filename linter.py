@@ -30,3 +30,10 @@ class Shellcheck(Linter):
     syntax = 'shell-unix-generic'
     cmd = 'shellcheck --format gcc -'
     regex = r'^.+?:(?P<line>\d+):(?P<col>\d+): (?:(?P<error>error)|(?P<warning>(warning|note))): (?P<message>.+)$'
+
+    defaults = {
+        '--exclude=,': ''
+    }
+    inline_settings = 'exclude'
+    inline_overrides = 'exclude'
+    comment_re = r'\s*#'

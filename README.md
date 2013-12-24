@@ -34,6 +34,32 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings). For information on generic linter settings, please see [Linter Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Linter-Settings).
 
+In addition to the standard SublimeLinter settings, SublimeLinter-shellcheck provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings#inline-settings).
+
+|Setting|Description|Inline Setting|Inline Override|
+|:------|:----------|:------------:|:-------------:|
+|exclude|A comma-delimited list of codes to exclude.|&#10003;|&#10003;|
+
+### Examples
+
+You can use a single string (ex: ``"SC2034,SC2086"``), or an array of strings if not inline (ex: ``["SC2034", "SC2086"]``).
+
+For inline settings, you can put on the first two lines of the file:
+```bash
+# [SublimeLinter shellcheck-exclude: SC2034]
+```
+
+In your project or user settings, you can set:
+```json
+// ...
+"linters": {
+    "shellcheck": {
+        // ...
+        "exclude": "SC2034,SC2086"
+    },
+}
+```
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
