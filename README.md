@@ -9,7 +9,7 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 ### Linter installation
 Before using this plugin, you must ensure that `shellcheck` is installed on your system.
 
-*** Warning : `shellcheck` has to be compiled from its Haskell sources. There is no Windows installer, and no Homebrew or MacPorts version available for Mac OS X. ***
+***Warning : `shellcheck` has to be compiled from its Haskell sources. There is no Windows installer, and no Homebrew or MacPorts version available for Mac OS X.***
 
 To install `shellcheck`, do the following:
 
