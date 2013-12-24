@@ -8,3 +8,6 @@ Before this plugin will activate, you *must* follow the installation
 instructions here:
 
 https://github.com/NotSqrt/SublimeLinter-shellcheck
+
+*** WARNING : `shellcheck` has to be compiled from its Haskell sources.
+There is no Windows installer, and no Homebrew or MacPorts version available for Mac OS X. ***

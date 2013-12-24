@@ -28,5 +28,5 @@ class Shellcheck(Linter):
     """Provides an interface to shellcheck."""
 
     syntax = 'shell-unix-generic'
-    cmd = ('shellcheck', '--format', 'gcc', '-')
+    cmd = 'shellcheck --format gcc -'
     regex = r'^.+?:(?P<line>\d+):(?P<col>\d+): (?:(?P<error>error)|(?P<warning>(warning|note))): (?P<message>.+)$'
