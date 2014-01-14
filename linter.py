@@ -29,11 +29,14 @@ class Shellcheck(Linter):
 
     syntax = 'shell-unix-generic'
     cmd = 'shellcheck --format gcc -'
-    regex = r'^.+?:(?P<line>\d+):(?P<col>\d+): (?:(?P<error>error)|(?P<warning>(warning|note))): (?P<message>.+)$'
+    regex = (
+        r'^.+?:(?P<line>\d+):(?P<col>\d+): '
+        r'(?:(?P<error>error)|(?P<warning>(warning|note))): '
+        r'(?P<message>.+)$'
+    )
 
     defaults = {
         '--exclude=,': ''
     }
-    inline_settings = None
     inline_overrides = 'exclude'
     comment_re = r'\s*#'
