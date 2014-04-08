@@ -1,7 +1,7 @@
 SublimeLinter-shellcheck
 =========================
 
-[![Build Status](https://khancdn.eu/badges.php?service=https%3A%2F%2Ftravis-ci.org%2FSublimeLinter%2FSublimeLinter-shellcheck.png%3Fbranch%3Dmaster)](https://travis-ci.org/SublimeLinter/SublimeLinter-shellcheck)
+[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-shellcheck.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-shellcheck)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [shellcheck](http://www.shellcheck.net/about.html). It will be used with files that have the “Shell-Unix-Generic” syntax (aka Shell Script (Bash)).
 
