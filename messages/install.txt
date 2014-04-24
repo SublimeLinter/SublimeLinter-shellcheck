@@ -11,4 +11,4 @@ https://github.com/SublimeLinter/SublimeLinter-shellcheck
 
 *** WARNING : `shellcheck` has to be compiled from its Haskell sources.
 There is no Windows installer.
-For Mac OS X, there is a homebrew version available via a pull request. ***
+For Mac OS X and Linux, `shellcheck` is installable with cabal-install. ***

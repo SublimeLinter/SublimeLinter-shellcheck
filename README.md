@@ -11,19 +11,11 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 ### Linter installation
 Before using this plugin, you must ensure that `shellcheck` is installed on your system.
 
-***Warning : `shellcheck` has to be compiled from its Haskell sources. There is no Windows installer.***
+***Warning : `shellcheck` has to be compiled from its Haskell sources (manually, or through `cabal`). There is no Windows installer.***
 
-To install `shellcheck`, do the following:
+To install `shellcheck`, follow the instructions on [the shellcheck GitHub repository](https://github.com/koalaman/shellcheck).
 
-1. Go to [the shellcheck GitHub repository](https://github.com/koalaman/shellcheck).
-1. Clone the git repo or download it as a ZIP archive; make sure to use a version more recent than commit 376d407ea10b55 (2013-11-13 17:28:08), where an easily parseable output was added.
-1. Follow instructions in the [shellcheck README](https://github.com/koalaman/shellcheck).
-
-On Mac OS X, there is a homebrew version available via a pull request:
-
-```bash
-brew install https://github.com/Homebrew/homebrew/pull/23839
-```
+If you install it manually, make sure to use a version more recent than commit 376d407ea10b55 (2013-11-13 17:28:08, between version 0.2.0 and 0.3.0), where an easily parseable output was added.
 
 Once `shellcheck` is installed, you must ensure it is in your system PATH so that SublimeLinter can find it. This may not be as straightforward as you think, so please read about [how linter executables are located][locating-executables] in the documentation.
 
