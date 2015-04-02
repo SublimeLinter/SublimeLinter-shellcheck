@@ -9,6 +9,5 @@ instructions here:
 
 https://github.com/SublimeLinter/SublimeLinter-shellcheck
 
-*** WARNING : `shellcheck` has to be compiled from its Haskell sources.
+Follow install instructions of shellcheck at https://github.com/koalaman/shellcheck
 There is no Windows installer.
-For Mac OS X and Linux, `shellcheck` is installable with cabal-install. ***
