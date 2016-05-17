@@ -24,7 +24,6 @@ from SublimeLinter.lint import Linter
 
 
 class Shellcheck(Linter):
-
     """Provides an interface to shellcheck."""
 
     syntax = 'shell-unix-generic'
