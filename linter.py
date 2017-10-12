@@ -26,7 +26,7 @@ from SublimeLinter.lint import Linter
 class Shellcheck(Linter):
     """Provides an interface to shellcheck."""
 
-    syntax = 'shell-unix-generic'
+    syntax = ('shell-unix-generic', 'bash')
     cmd = 'shellcheck --format gcc -'
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
