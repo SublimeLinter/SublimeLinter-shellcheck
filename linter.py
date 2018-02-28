@@ -22,6 +22,7 @@ Example output with --format gcc
 
 from SublimeLinter.lint import Linter
 from sublime import platform
+from shutil import which
 
 
 class Shellcheck(Linter):
@@ -31,7 +32,10 @@ class Shellcheck(Linter):
     cmd = 'shellcheck --format gcc -'
 
     if platform == 'windows':
-        cmd = 'wsl ' + cmd
+        if which('wsl'):
+            cmd = 'wsl ' + cmd
+        else:
+            raise OSError('Either the current system is not 64-bit, or WSL is not enabled. See the README file.')
 
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
