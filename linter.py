@@ -21,7 +21,7 @@ Example output with --format gcc
 """
 
 from SublimeLinter.lint import Linter
-from os import name
+from sublime import platform
 
 
 class Shellcheck(Linter):
@@ -30,8 +30,8 @@ class Shellcheck(Linter):
     syntax = ('shell-unix-generic', 'bash')
     cmd = 'shellcheck --format gcc -'
 
-    if name == "nt":
-        cmd = "wsl " + cmd
+    if platform == 'windows':
+        cmd = 'wsl ' + cmd
 
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
