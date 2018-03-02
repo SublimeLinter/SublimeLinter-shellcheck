@@ -21,6 +21,8 @@ Example output with --format gcc
 """
 
 from SublimeLinter.lint import Linter
+from shutil import which
+import sublime
 
 
 class Shellcheck(Linter):
@@ -28,6 +30,13 @@ class Shellcheck(Linter):
 
     syntax = ('shell-unix-generic', 'bash')
     cmd = 'shellcheck --format gcc -'
+
+    if sublime.platform() == 'windows':
+        if which('wsl'):
+            cmd = 'wsl ' + cmd
+        else:
+            raise OSError('Either the current system is not 64-bit, or WSL is not enabled. See the README file.')
+
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
         r'(?:(?P<error>error)|(?P<warning>(warning|note))): '

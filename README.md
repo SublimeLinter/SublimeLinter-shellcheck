@@ -15,9 +15,10 @@ Before using this plugin, you must ensure that `shellcheck` is installed on your
 To install `shellcheck`, follow the instructions on [the shellcheck GitHub repository](https://github.com/koalaman/shellcheck).
 
 `shellcheck` can be installed with ``apt-get`` on Debian sid, ``brew`` on Mac OS X, or compiled from its Haskell sources (manually, or through `cabal`). 
-There is no Windows installer.
 
-In order for `shellcheck` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.readthedocs.io/en/latest/troubleshooting.html#finding-a-linter-executable).
+On Windows, the Linux Subsystem must be enabled. See [Microsoft's guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then run `wsl sudo apt install shellcheck` to install Shellcheck (if you installed ubuntu).
+
+On native Linux systems, in order for `shellcheck` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.readthedocs.io/en/latest/troubleshooting.html#finding-a-linter-executable).
 
 ## Settings
 - SublimeLinter settings: http://sublimelinter.readthedocs.org/en/latest/settings.html
