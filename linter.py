@@ -31,11 +31,8 @@ class Shellcheck(Linter):
     syntax = ('shell-unix-generic', 'bash')
     cmd = 'shellcheck --format gcc -'
 
-    if sublime.platform() == 'windows':
-        if which('wsl'):
-            cmd = 'wsl ' + cmd
-        else:
-            raise OSError('Either the current system is not 64-bit, or WSL is not enabled. See the README file.')
+    if sublime.platform() == 'windows' and which('wsl'):
+        cmd = 'wsl ' + cmd
 
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
