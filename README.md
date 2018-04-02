@@ -18,11 +18,11 @@ To install `shellcheck`, follow the instructions on [the shellcheck GitHub repos
 
 On Windows, the Linux Subsystem must be enabled. See [Microsoft's guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then run `wsl sudo apt install shellcheck` to install Shellcheck (if you installed ubuntu).
 
-On native Linux systems, in order for `shellcheck` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.readthedocs.io/en/latest/troubleshooting.html#finding-a-linter-executable).
+On native Linux systems, in order for `shellcheck` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.com/en/latest/troubleshooting.html#finding-a-linter-executable).
 
 ## Settings
-- SublimeLinter settings: http://sublimelinter.readthedocs.org/en/latest/settings.html
-- Linter settings: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
+- SublimeLinter settings: http://sublimelinter.com/en/latest/settings.html
+- Linter settings: http://sublimelinter.com/en/latest/linter_settings.html
 
 Additional SublimeLinter-shellcheck settings:
 
@@ -30,5 +30,5 @@ Additional SublimeLinter-shellcheck settings:
 |:------|:----------|
 |exclude|A comma-delimited list of codes to exclude.|
 
-E.g. you can use a single string (ex: ``"SC2034,SC2086"``), or an array of strings if not inline (ex: ``["SC2034", "SC2086"]``).
+E.g. you can use a single string (eg: ``"SC2034,SC2086"``), or an array of strings (eg: ``["SC2034", "SC2086"]``).
 
