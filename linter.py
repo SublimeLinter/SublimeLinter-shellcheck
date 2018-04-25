@@ -15,6 +15,6 @@ class Shellcheck(Linter):
         r'(?P<message>.+)$'
     )
     defaults = {
-        'selector': 'source.shell',
+        'selector': 'source.shell - source.makefile',
         '--exclude=,': ''
     }
