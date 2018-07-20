@@ -18,7 +18,7 @@ To install `shellcheck`, follow the instructions on [the shellcheck GitHub repos
 
 `shellcheck` can be installed with ``apt-get`` on Debian sid, ``brew`` on Mac OS X, or compiled from its Haskell sources (manually, or through `cabal`). 
 
-On Windows, the Linux Subsystem must be enabled. See [Microsoft's guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then run `wsl sudo apt install shellcheck` to install Shellcheck (if you installed ubuntu).
+On Windows, the Linux Subsystem must be enabled. See [Microsoft's guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then run `wsl sudo apt update` and `wsl sudo apt install shellcheck` to install Shellcheck (if you installed ubuntu).
 
 On native Linux systems, Please make sure that the path to `shellcheck` is available to SublimeLinter.
 The docs cover [troubleshooting PATH configuration](http://sublimelinter.com/en/latest/troubleshooting.html#finding-a-linter-executable).
