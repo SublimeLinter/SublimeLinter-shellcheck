@@ -6,7 +6,7 @@ import sublime
 class Shellcheck(Linter):
 
     cmd = 'shellcheck --format=gcc -'
-    if sublime.platform() == 'windows' and which('wsl'):
+    if sublime.platform() == 'windows' and not which('shellcheck') and which('wsl'):
         cmd = 'wsl ' + cmd
 
     regex = (
