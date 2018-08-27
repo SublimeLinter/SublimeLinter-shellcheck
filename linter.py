@@ -5,7 +5,7 @@ import sublime
 
 class Shellcheck(Linter):
 
-    cmd = 'shellcheck --format=gcc -'
+    cmd = 'shellcheck --format=gcc ${args} -'
     if sublime.platform() == 'windows' and not which('shellcheck') and which('wsl'):
         cmd = 'wsl ' + cmd
 
