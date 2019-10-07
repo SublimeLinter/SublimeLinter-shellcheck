@@ -5,9 +5,23 @@ import sublime
 
 class Shellcheck(Linter):
 
-    cmd = 'shellcheck --format=gcc ${args} -'
-    if sublime.platform() == 'windows' and not which('shellcheck') and which('wsl'):
-        cmd = 'wsl ' + cmd
+    def cmd(self):
+        cmd = []
+        if sublime.platform() == 'windows' and not which('shellcheck') and which('wsl'):
+            cmd.append('wsl')
+
+        cmd.extend([
+            'shellcheck',
+            '--format=gcc',
+        ])
+
+        if self.filename.endswith('.ebuild'):
+            cmd.append('--shell=bash')
+
+        cmd.append('${args}')
+        cmd.append('-')
+
+        return cmd
 
     regex = (
         r'^.+?:(?P<line>\d+):(?P<col>\d+): '
