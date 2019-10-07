@@ -13,6 +13,7 @@ class Shellcheck(Linter):
         cmd.extend([
             'shellcheck',
             '--format=gcc',
+            '--external-sources',
         ])
 
         if self.filename.endswith('.ebuild'):
