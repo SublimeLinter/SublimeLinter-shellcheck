@@ -7,4 +7,3 @@ Please read the installation instructions at:
 https://github.com/SublimeLinter/SublimeLinter-shellcheck
 
 Follow install instructions of shellcheck at https://github.com/koalaman/shellcheck
-There is no Windows installer.
